@@ -3,12 +3,12 @@ import useForm from './UseForm'
 
 const FormSignup = () => {
   
-    const {handleChange, values} = useForm();
+    const { handleChange, values, handleSubmit } = useForm();
     return (
     
     <div>
         <div className="form-content-right">
-            <form className="form">
+            <form className="form" onSubmit={ handleSubmit }>
                 <h1> Create an account...</h1>
                 <div className="form-inputs">
                     <label htmlFor="username" className="form-label">Username</label>
