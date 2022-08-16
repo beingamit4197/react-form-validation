@@ -2,13 +2,14 @@ import React from 'react'
 import useForm from './UseForm'
 import validate from './ValidateInfo'
 import './Form.css'
+import '../App.css'
 
 const FormSignup = ({ submitForm }) => {
   
     const { handleChange, values, handleSubmit, errors } = useForm(submitForm, validate);
     return (
     
-    <div>
+    <>
         <div className="form-content-right">
             <form className="form" onSubmit={ handleSubmit }>
                 <h1> Create an account...</h1>
@@ -44,7 +45,7 @@ const FormSignup = ({ submitForm }) => {
                 </span>
             </form>
         </div>
-    </div>
+    </>
   )
 }
 
